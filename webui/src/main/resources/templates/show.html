@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>showBigData</title>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 间歇执行  setInterval调用匿名函数
+            setInterval(function(){$.ajax({
+                url: "http://localhost:8080/ui",
+                success: function (data) {
+                    var clickTrendOption = data;
+
+                    var dom = document.getElementById("container");
+                    var myChart = echarts.init(dom);
+                    var app = {};
+                    option = null;
+                    option = {
+                        title: {
+                            text: '广告点击量实时统计',
+                            subtext: '当天当前小时',
+                            subtext: '每4秒自动刷新一次'
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            data: clickTrendOption.legend_data
+                        },
+                        toolbox: {
+                            show: true,
+                            feature: {
+                                dataZoom: {
+                                    yAxisIndex: 'none'
+                                },
+                                dataView: {readOnly: false},
+                                magicType: {type: ['line', 'bar']},
+                                restore: {},
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: clickTrendOption.data
+                        },
+                        yAxis: {
+                            type: 'value',
+                            axisLabel: {
+                                formatter: '{value} 次'
+                            }
+                        },
+                        series: clickTrendOption.lineList
+                    };
+
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    };
+                }
+            })}, 4*1000);
+
+
+        })
+
+    </script>
+</head>
+<body>
+<div id="container" style="height: 800px"></div>
+</body>
+</html>
