@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd68cc0e-6ed3-4787-946f-26eb15181a39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fd68cc0e-6ed3-4787-946f-26eb15181a39" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/aaocp_mock_data/target/" />
@@ -240,8 +237,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="aaocp_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aaocp_parent" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -514,16 +521,17 @@
       <workItem from="1569371967252" duration="466000" />
       <workItem from="1569372618441" duration="330000" />
       <workItem from="1569497564242" duration="766000" />
+      <workItem from="1569500488204" duration="274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146541000" />
+    <option name="totallyTimeSpent" value="146815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49656358" visible="true" weight="0.20021299" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49656358" visible="true" weight="0.20234291" />
       <window_info id="Structure" order="1" sideWeight="0.50343645" side_tool="true" weight="0.18796591" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
