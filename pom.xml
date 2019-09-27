@@ -19,7 +19,7 @@
     </modules>
     <!-- 声明子项目公用的配置属性 -->
     <properties>
-        <spark.version>2.1.1</spark.version>
+        <spark.version>2.4.4</spark.version>
         <scala.version>2.11.8</scala.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.22</slf4j.version>
