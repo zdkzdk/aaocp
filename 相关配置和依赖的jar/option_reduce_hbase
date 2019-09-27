@@ -1,0 +1,83 @@
+# Name the components on this agent
+a1.sources = r1
+a1.sinks = k_action k_product k_userinfo
+a1.channels = c_action c_product c_userinfo
+
+# source
+#r1
+a1.sources.r1.type = avro
+a1.sources.r1.bind = node7
+a1.sources.r1.port = 44444
+
+a1.sources.r1.selector.type=multiplexing
+a1.sources.r1.selector.header=state
+a1.sources.r1.selector.mapping.ACTION=c_action
+a1.sources.r1.selector.mapping.PRODUCT=c_product
+a1.sources.r1.selector.mapping.USERINFO=c_userinfo
+a1.sources.r1.selector.mapping.default=c_product
+
+
+#sink
+#action
+a1.sinks.k_action.type = hbase
+a1.sinks.k_action.table = user_visit_action
+a1.sinks.k_action.columnFamily  = cf1
+a1.sinks.k_action.serializer = cn.dc.customSerializer.ActionCustomFlumeHBaseSerializer
+#a1.sinks.k_action.serializer = org.apache.flume.sink.hbase.SimpleHbaseEventSerializer
+#a1.sinks.k_action.serializer.payloadColumn = info
+#a1.sinks.k_action.serializer = org.apache.flume.sink.hbase.RegexHbaseEventSerializer
+#a1.sinks.k_action.serializer.regex = [^&]*?[&]?
+#a1.sinks.k_action.serializer.colNames=date1,session_id,page_id,action_time,search_keyword,click_category_id,click_product_id,order_category_ids,order_product_ids,pay_category_ids,pay_product_ids,city_id
+
+#product
+
+#a1.sinks.k_product.type = logger
+a1.sinks.k_product.type = hbase
+a1.sinks.k_product.table = product_info
+a1.sinks.k_product.columnFamily  = cf1
+a1.sinks.k_product.serializer = cn.dc.customSerializer.ProductCustomFlumeHBaseSerializer
+#a1.sinks.k_product.serializer.payloadColumn = info
+
+#a1.sinks.k_product.serializer = org.apache.flume.sink.hbase.RegexHbaseEventSerializer
+#a1.sinks.k_product.serializer.regex = [^&]*?[&]?
+#a1.sinks.k_product.serializer.colNames = product_id,product_name,extend_info
+
+#userinfo
+#a1.sinks.k_userinfo.type = logger
+a1.sinks.k_userinfo.type = hbase
+a1.sinks.k_userinfo.table = user_info
+a1.sinks.k_userinfo.columnFamily  = cf1
+a1.sinks.k_userinfo.serializer = cn.dc.customSerializer.UserInfoCustomFlumeHBaseSerializer
+#a1.sinks.k_userinfo.serializer.payloadColumn = info
+
+#a1.sinks.k_userinfo.serializer = org.apache.flume.sink.hbase.RegexHbaseEventSerializer
+#a1.sinks.k_userinfo.serializer.regex = [^&]*?[&]?
+#a1.sinks.k_userinfo.serializer.colNames = user_id,username,name,age,professional,city,sex
+
+
+
+
+#channels
+a1.channels.c_action.type=file
+a1.channels.c_action.checkpointDir=/usr/1
+a1.channels.c_action.dataDirs = /usr/2
+
+
+
+#a1.channels.c_action.type=memory
+#a1.channels.c_action.capacity=10000
+#a1.channels.c_action.transactionCapacity=20
+a1.channels.c_product.type=memory
+#a1.channels.c_product.capacity=10000
+#a1.channels.c_product.transactionCapacity=20
+a1.channels.c_userinfo.type=memory
+#a1.channels.c_userinfo.capacity=10000
+#a1.channels.c_userinfo.transactionCapacity=20
+
+
+
+#connection
+a1.sources.r1.channels = c_action c_product c_userinfo
+a1.sinks.k_action.channel = c_action
+a1.sinks.k_product.channel = c_product
+a1.sinks.k_userinfo.channel = c_userinfo
