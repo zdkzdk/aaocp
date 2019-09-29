@@ -154,10 +154,7 @@ public class AnalyticsEngineSDK {
 
 	/**
 	 * 根据传入的参数构建url
-	 * 
-	 * @param data
-	 * @return
-	 * @throws UnsupportedEncodingException
+	 *
 	 */
 	private static String buildUrl(String accessUrl,Map<String, String> data)
 			throws UnsupportedEncodingException {

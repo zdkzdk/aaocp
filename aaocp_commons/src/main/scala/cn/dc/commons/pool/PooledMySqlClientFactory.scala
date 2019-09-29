@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018. Atguigu Inc. All Rights Reserved.
- */
-
 package cn.dc.commons.pool
 
 import java.sql.{Connection, DriverManager, PreparedStatement, ResultSet}

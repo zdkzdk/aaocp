@@ -7,14 +7,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * 发送url数据的监控者，用于启动一个单独的线程来发送数据
- * 
- * @author root
- *
  */
 public class SendDataMonitor {
 	// 日志记录对象

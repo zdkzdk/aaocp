@@ -10,8 +10,6 @@
  Target Server Type    : MySQL
  Target Server Version : 50720
  File Encoding         : utf-8
-
- Date: 11/03/2017 11:23:32 AM
 */
 
 SET FOREIGN_KEY_CHECKS = 0;

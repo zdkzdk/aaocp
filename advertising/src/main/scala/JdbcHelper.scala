@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018. Atguigu Inc. All Rights Reserved.
- */
-
 import java.sql.ResultSet
 
 import cn.dc.commons.pool.{CreateMySqlPool, QueryCallback}
@@ -178,8 +174,6 @@ object AdUserClickCountDAO {
 /**
   * 广告实时统计DAO实现类
   *
-  * @author Administrator
-  *
   */
 object AdStatDAO {
 
@@ -253,8 +247,6 @@ object AdStatDAO {
 /**
   * 各省份top3热门广告DAO实现类
   *
-  * @author Administrator
-  *
   */
 object AdProvinceTop3DAO {
 
@@ -319,8 +311,6 @@ object AdProvinceTop3DAO {
 
 /**
   * 广告点击趋势DAO实现类
-  *
-  * @author Administrator
   *
   */
 object AdClickTrendDAO {
