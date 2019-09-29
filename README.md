@@ -12,6 +12,9 @@
 ![avatar](https://raw.githubusercontent.com/zdkzdk/aaocp/master/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84%E9%85%8D%E7%BD%AE%E3%80%81%E4%BE%9D%E8%B5%96/img/4.png)
 ####    6.&nbsp;数据处理展示阶段：实时
 ![avatar](https://raw.githubusercontent.com/zdkzdk/aaocp/master/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84%E9%85%8D%E7%BD%AE%E3%80%81%E4%BE%9D%E8%B5%96/img/5.png)
+####    7.&nbsp;webui
+![avatar](https://raw.githubusercontent.com/zdkzdk/aaocp/master/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E5%92%8C%E7%9B%B8%E5%85%B3%E7%9A%84%E9%85%8D%E7%BD%AE%E3%80%81%E4%BE%9D%E8%B5%96/img/7.png)
+
 
 
 
