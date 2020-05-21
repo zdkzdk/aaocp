@@ -31,7 +31,7 @@
             <!-- 有助于以各种格式读取配置/偏好文件的工具 -->
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-configuration2</artifactId>
-            <version>2.2</version>
+            <version>2.7</version>
         </dependency>
         <dependency>
             <!-- commons-beanutil中包括大量和JavaBean操作有关的工具方法，
